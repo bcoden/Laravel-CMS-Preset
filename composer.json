@@ -1,0 +1,23 @@
+{
+    "name": "bcoden/cms-preset",
+    "description": "Laravel cms preset",
+    "keywords": ["laravel","cms","laravel preset", "bcoden"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joe McCorison",
+            "email": "joemccorison@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Bcoden\\Laravel\\Presets": 'src/'
+        }
+    },
+    "extra": {
+        "laravel":  {
+            "providers": [  "Bcoden\\Laravel\\Presets\\CMSServiceProvider"]
+        }
+    }
+}
