@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Bcoden\\Laravel\\Presets": "src/"
+            "Bcoden\\Laravel\\Presets\\": "src/"
         }
     },
     "extra": {
