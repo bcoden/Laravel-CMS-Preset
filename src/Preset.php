@@ -2,7 +2,7 @@
 
 namespace Bcoden\Laravel\Presets;
 
-use Illuminate\Foundation\Console\PresetCommand as LaravelPreset;
+use Illuminate\Foundation\Console\Presets\Preset as LaravelPreset;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Arr;
 
@@ -12,6 +12,7 @@ class Preset extends LaravelPreset
         static::updatePackages();
         static::updateMix();
         static::updateBootstap();
+        static::updateStyles();
     }
 
     /*
@@ -29,8 +30,8 @@ class Preset extends LaravelPreset
      * @param $packages
      * @return array
      */
-    public static function updatePackages($packages) {
-        $include = ['laravel-mix-tailwind' => '0.1.0', 'node-sass' => '^4.12.0'];
+    public static function updatePackageArray($packages) {
+        $include = ['laravel-mix-tailwind' => '0.1.0'];
         $exclude = ['popper.js', 'lodash', 'jquery'];
 
         return array_merge($include, Arr::except($packages, $exclude));
@@ -47,6 +48,10 @@ class Preset extends LaravelPreset
      * Sets up bootstrap js the way we like it
      */
     public static function updateBootstap() {
-        copy(__DIR__.'/stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
+        copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
+    }
+
+    public static function updateStyles() {
+        File::put(resource_path('sass/app.scss'), '');
     }
 }
