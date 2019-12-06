@@ -26,6 +26,7 @@ class CMSServiceProvider extends ServiceProvider
     {
         PresetCommand::macro('cms', function($command) {
             Preset::install();
+            $command->info('CMS preset successfully applied!');
         });
     }
 }
