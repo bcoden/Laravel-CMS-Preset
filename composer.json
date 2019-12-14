@@ -15,6 +15,9 @@
             "Bcoden\\Laravel\\Presets\\": "src/"
         }
     },
+    "require": {
+        "php": ">=7.2.0"
+    },
     "extra": {
         "laravel":  {
             "providers": [  "Bcoden\\Laravel\\Presets\\CMSServiceProvider"]
