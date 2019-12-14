@@ -17,3 +17,7 @@ Run the preset
 ```composer log
 php artisan preset cms
 ```
+
+## Requirements
+* [Laravel 6](https://laravel.com/) or greater
+* [PHP 7](https://www.php.net/) or greater
