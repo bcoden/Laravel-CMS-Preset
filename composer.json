@@ -1,6 +1,6 @@
 {
     "name": "bcoden/cms-preset",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Laravel cms preset",
     "keywords": ["laravel","cms","laravel preset", "bcoden"],
     "license": "MIT",
