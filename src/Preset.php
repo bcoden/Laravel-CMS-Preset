@@ -13,6 +13,7 @@ class Preset extends LaravelPreset
         static::updateMix();
         static::updateBootstap();
         static::updateStyles();
+        static::setupTailwindConfig();
     }
 
     /*
@@ -51,7 +52,17 @@ class Preset extends LaravelPreset
         copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
     }
 
+    /**
+     * Sets up the app.scss file
+     */
     public static function updateStyles() {
-        File::put(resource_path('sass/app.scss'), '');
+        copy(__DIR__.'/stubs/app.scss', resource_path('sass/app.scss'));
+    }
+
+    /**
+     * Add tailwind config
+     */
+    public static function setupTailwindConfig() {
+        copy(__DIR__.'/stubs/tailwind.js.js', base_path('tailwind.js'));
     }
 }
