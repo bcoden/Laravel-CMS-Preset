@@ -63,6 +63,6 @@ class Preset extends LaravelPreset
      * Add tailwind config
      */
     public static function setupTailwindConfig() {
-        copy(__DIR__.'/stubs/tailwind.js.js', base_path('tailwind.js'));
+        copy(__DIR__.'/stubs/tailwind.js', base_path('tailwind.js'));
     }
 }
